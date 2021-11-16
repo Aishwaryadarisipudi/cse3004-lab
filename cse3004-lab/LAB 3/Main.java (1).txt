@@ -1,0 +1,20 @@
+import java.util.*;
+public class Main {
+ static int naiveGcd(int x, int y)
+{
+ int z = x+y, gcd=0;
+ for(int i=1; i<z; i++){
+ if((x%i==0) && (y%i==0)){
+ gcd = i;
+ }
+ }return gcd;
+}
+ public static void main(String args[]) {
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Input number 1");
+ int a=sc.nextInt();
+ System.out.println("Input number 2");
+ int b=sc.nextInt();
+ System.out.println("The gcd of the given numbers is " + naiveGcd(a,b));
+ }
+}
